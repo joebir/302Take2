@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EFConnect.Contracts;
 using EFConnect.Data;
+using EFConnect.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,7 @@ namespace EFConnect.API
         {
             services.AddDbContext<EFConnectContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
+            services.AddScoped<IAuthService, AuthService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
