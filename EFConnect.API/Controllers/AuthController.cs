@@ -18,10 +18,14 @@ namespace EFConnect.API.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] UserForRegister userForRegister)
         {
-            userForRegister.Username = userForRegister.Username.ToLower();
+            if (!string.IsNullOrEmpty(userForRegister.Username))
+                userForRegister.Username = userForRegister.Username.ToLower();
 
             if (await _authService.UserExists(userForRegister.Username))
-                return BadRequest("Username is already taken");
+                ModelState.AddModelError("Username", "Username already exists");
+
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
             
             var userToCreate = new User
             {
