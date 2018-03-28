@@ -9,3 +9,12 @@ C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFCon
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFConnect.API.AssemblyInfo.cs
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFConnect.API.dll
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFConnect.API.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Contracts.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Data.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Models.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Services.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Data.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Models.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Contracts.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Services.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFConnect.API.csproj.CopyComplete

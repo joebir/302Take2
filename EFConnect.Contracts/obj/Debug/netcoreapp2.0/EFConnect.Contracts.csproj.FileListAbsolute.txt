@@ -1,0 +1,13 @@
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Contracts.deps.json
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Contracts.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Contracts.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Data.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Models.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Data.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\bin\Debug\netcoreapp2.0\EFConnect.Models.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.AssemblyInfoInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.AssemblyInfo.cs
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.csproj.CopyComplete
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Contracts\obj\Debug\netcoreapp2.0\EFConnect.Contracts.pdb

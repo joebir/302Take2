@@ -1,0 +1,15 @@
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Services.deps.json
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Services.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Services.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Contracts.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Data.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Models.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Data.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Models.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Contracts.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.AssemblyInfoInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.AssemblyInfo.cs
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.csproj.CopyComplete
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.pdb

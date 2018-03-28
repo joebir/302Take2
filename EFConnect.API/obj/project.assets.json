@@ -4746,6 +4746,63 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "EFConnect.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "EFConnect.Data": "1.0.0",
+          "EFConnect.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EFConnect.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFConnect.Contracts.dll": {}
+        }
+      },
+      "EFConnect.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/EFConnect.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFConnect.Data.dll": {}
+        }
+      },
+      "EFConnect.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "EFConnect.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EFConnect.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFConnect.Models.dll": {}
+        }
+      },
+      "EFConnect.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "EFConnect.Contracts": "1.0.0",
+          "EFConnect.Data": "1.0.0",
+          "EFConnect.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EFConnect.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFConnect.Services.dll": {}
+        }
       }
     }
   },
@@ -12527,10 +12584,34 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "EFConnect.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../EFConnect.Contracts/EFConnect.Contracts.csproj",
+      "msbuildProject": "../EFConnect.Contracts/EFConnect.Contracts.csproj"
+    },
+    "EFConnect.Data/1.0.0": {
+      "type": "project",
+      "path": "../EFConnect.Data/EFConnect.Data.csproj",
+      "msbuildProject": "../EFConnect.Data/EFConnect.Data.csproj"
+    },
+    "EFConnect.Models/1.0.0": {
+      "type": "project",
+      "path": "../EFConnect.Models/EFConnect.Models.csproj",
+      "msbuildProject": "../EFConnect.Models/EFConnect.Models.csproj"
+    },
+    "EFConnect.Services/1.0.0": {
+      "type": "project",
+      "path": "../EFConnect.Services/EFConnect.Services.csproj",
+      "msbuildProject": "../EFConnect.Services/EFConnect.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "EFConnect.Contracts >= 1.0.0",
+      "EFConnect.Data >= 1.0.0",
+      "EFConnect.Models >= 1.0.0",
+      "EFConnect.Services >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.6",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -12564,7 +12645,20 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Contracts\\EFConnect.Contracts.csproj": {
+              "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Contracts\\EFConnect.Contracts.csproj"
+            },
+            "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Data\\EFConnect.Data.csproj": {
+              "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Data\\EFConnect.Data.csproj"
+            },
+            "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Models\\EFConnect.Models.csproj": {
+              "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Models\\EFConnect.Models.csproj"
+            },
+            "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Services\\EFConnect.Services.csproj": {
+              "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Services\\EFConnect.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
