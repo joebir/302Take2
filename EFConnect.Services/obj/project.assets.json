@@ -924,6 +924,16 @@
           "bin/placeholder/EFConnect.Data.dll": {}
         }
       },
+      "EFConnect.Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/EFConnect.Helpers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFConnect.Helpers.dll": {}
+        }
+      },
       "EFConnect.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -3438,6 +3448,11 @@
       "path": "../EFConnect.Data/EFConnect.Data.csproj",
       "msbuildProject": "../EFConnect.Data/EFConnect.Data.csproj"
     },
+    "EFConnect.Helpers/1.0.0": {
+      "type": "project",
+      "path": "../EFConnect.Helpers/EFConnect.Helpers.csproj",
+      "msbuildProject": "../EFConnect.Helpers/EFConnect.Helpers.csproj"
+    },
     "EFConnect.Models/1.0.0": {
       "type": "project",
       "path": "../EFConnect.Models/EFConnect.Models.csproj",
@@ -3448,6 +3463,7 @@
     ".NETCoreApp,Version=v2.0": [
       "EFConnect.Contracts >= 1.0.0",
       "EFConnect.Data >= 1.0.0",
+      "EFConnect.Helpers >= 1.0.0",
       "EFConnect.Models >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -3487,6 +3503,9 @@
             },
             "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Data\\EFConnect.Data.csproj": {
               "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Data\\EFConnect.Data.csproj"
+            },
+            "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Helpers\\EFConnect.Helpers.csproj": {
+              "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Helpers\\EFConnect.Helpers.csproj"
             },
             "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Models\\EFConnect.Models.csproj": {
               "projectPath": "C:\\ElevenFiftyContractWork\\EFConnect\\EFConnect.Models\\EFConnect.Models.csproj"

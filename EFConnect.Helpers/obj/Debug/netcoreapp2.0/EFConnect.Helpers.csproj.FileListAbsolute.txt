@@ -1,0 +1,8 @@
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Helpers.deps.json
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Helpers.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Helpers.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.AssemblyInfoInputs.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.AssemblyInfo.cs
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.pdb

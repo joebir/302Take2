@@ -18,3 +18,5 @@ C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFCon
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Contracts.pdb
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Services.pdb
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\obj\Debug\netcoreapp2.0\EFConnect.API.csproj.CopyComplete
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Helpers.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.API\bin\Debug\netcoreapp2.0\EFConnect.Helpers.pdb

@@ -14,3 +14,5 @@ C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.dll
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.pdb
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\obj\Debug\netcoreapp2.0\EFConnect.Services.csprojResolveAssemblyReference.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Helpers.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Services\bin\Debug\netcoreapp2.0\EFConnect.Helpers.pdb

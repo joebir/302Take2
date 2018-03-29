@@ -3756,6 +3756,14 @@
           "EFConnect.Data.dll": {}
         }
       },
+      "EFConnect.Helpers/1.0.0": {
+        "runtime": {
+          "EFConnect.Helpers.dll": {}
+        },
+        "compile": {
+          "EFConnect.Helpers.dll": {}
+        }
+      },
       "EFConnect.Models/1.0.0": {
         "dependencies": {
           "EFConnect.Data": "1.0.0"
@@ -3771,6 +3779,7 @@
         "dependencies": {
           "EFConnect.Contracts": "1.0.0",
           "EFConnect.Data": "1.0.0",
+          "EFConnect.Helpers": "1.0.0",
           "EFConnect.Models": "1.0.0"
         },
         "runtime": {
@@ -5944,6 +5953,11 @@
       "sha512": ""
     },
     "EFConnect.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EFConnect.Helpers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
