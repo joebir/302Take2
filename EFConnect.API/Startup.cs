@@ -35,6 +35,7 @@ namespace EFConnect.API
             services.AddTransient<Seed>();
             services.AddMvc();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
