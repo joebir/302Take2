@@ -54,7 +54,7 @@ namespace EFConnect.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            seeder.SeedUsers();
+            // seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
             app.UseAuthentication();
             app.UseMvc();

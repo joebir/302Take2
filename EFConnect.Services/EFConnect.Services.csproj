@@ -4,6 +4,7 @@
     <ProjectReference Include="..\EFConnect.Data\EFConnect.Data.csproj" />
     <ProjectReference Include="..\EFConnect.Models\EFConnect.Models.csproj" />
     <ProjectReference Include="..\EFConnect.Contracts\EFConnect.Contracts.csproj" />
+    <ProjectReference Include="..\EFConnect.Helpers\EFConnect.Helpers.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
