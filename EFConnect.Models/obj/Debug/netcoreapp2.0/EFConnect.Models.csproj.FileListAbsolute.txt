@@ -9,3 +9,4 @@ C:\ElevenFiftyContractWork\EFConnect\EFConnect.Models\obj\Debug\netcoreapp2.0\EF
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Models\obj\Debug\netcoreapp2.0\EFConnect.Models.csproj.CopyComplete
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Models\obj\Debug\netcoreapp2.0\EFConnect.Models.dll
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Models\obj\Debug\netcoreapp2.0\EFConnect.Models.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Models\obj\Debug\netcoreapp2.0\EFConnect.Models.csprojResolveAssemblyReference.cache

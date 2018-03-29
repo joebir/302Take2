@@ -8,5 +8,7 @@ namespace EFConnect.Data
         public EFConnectContext(DbContextOptions<EFConnectContext> options) : base(options) {}
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Photo> Photos { get; set; }
     }
 }
