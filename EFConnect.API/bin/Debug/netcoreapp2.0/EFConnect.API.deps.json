@@ -3757,6 +3757,9 @@
         }
       },
       "EFConnect.Helpers/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.All": "2.0.6"
+        },
         "runtime": {
           "EFConnect.Helpers.dll": {}
         },

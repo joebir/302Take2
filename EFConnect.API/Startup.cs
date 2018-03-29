@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using EFConnect.Contracts;
 using EFConnect.Data;
+using EFConnect.Helpers;
 using EFConnect.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,7 +41,8 @@ namespace EFConnect.API
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUserService, UserService>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options => {
+                .AddJwtBearer(options =>
+                {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
@@ -51,14 +56,37 @@ namespace EFConnect.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder)
         {
-            if (env.IsDevelopment())
+            app.UseExceptionHandler(builder =>
             {
-                app.UseDeveloperExceptionPage();
-            }
+                builder.Run(async context =>
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+                    var error = context.Features.Get<IExceptionHandlerFeature>();
+                    if (error != null)
+                    {
+                        await context.Response.WriteAsync(error.Error.Message);
+                    }
+                });
+            });
             // seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
             app.UseAuthentication();
             app.UseMvc();
+            app.UseExceptionHandler(builder =>
+            {
+                builder.Run(async context =>
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+                    var error = context.Features.Get<IExceptionHandlerFeature>();
+                    if (error != null)
+                    {
+                        context.Response.AddApplicationError(error.Error.Message);          //  <--- Added
+                        await context.Response.WriteAsync(error.Error.Message);
+                    }
+                });
+            });
         }
     }
 }
