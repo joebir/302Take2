@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using EFConnect.Data.Entities;
 using EFConnect.Models.Photo;
 
 namespace EFConnect.Contracts
@@ -7,5 +8,7 @@ namespace EFConnect.Contracts
     {
         Task<PhotoForReturn> GetPhoto(int id);
         Task<PhotoForReturn> AddPhotoForUser(int userId, PhotoForCreation photoDto);
+        Task<Photo> GetMainPhotoForUser(int userId);
+        Task<bool> SetMainPhotoForUser(int userId, PhotoForReturn photo);
     }
 }

@@ -50,5 +50,25 @@ namespace EFConnect.API.Controllers
 
             return Ok(photo);
         }
+
+        [HttpPost("{id}/setMain")]
+        public async Task<IActionResult> SetMainPhoto(int userId, int id)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var photoFromRepo = await _photoService.GetPhoto(id);
+
+            if (photoFromRepo == null)
+                return NotFound();
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("This is already the main photo");
+
+            if (await _photoService.SetMainPhotoForUser(userId, photoFromRepo))
+                return NoContent();
+
+            return BadRequest("Could not set photo to main");
+        }
     }
 }

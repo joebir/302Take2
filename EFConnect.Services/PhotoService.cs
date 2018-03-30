@@ -114,5 +114,22 @@ namespace EFConnect.Services
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<Photo> GetMainPhotoForUser(int userId)
+        {
+            return await _context.Photos.Where(u => u.UserId == userId).FirstOrDefaultAsync(p => p.IsMain);
+        }
+
+        public async Task<bool> SetMainPhotoForUser(int userId, PhotoForReturn photo)
+        {
+            var currentMainPhoto = await GetMainPhotoForUser(userId);
+
+            if (currentMainPhoto != null)
+                currentMainPhoto.IsMain = false;
+
+            _context.Photos.FirstOrDefault(p => p.Id == photo.Id).IsMain = true;
+
+            return await SaveAll();
+        }
     }
 }
