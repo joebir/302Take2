@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "CloudinaryDotNet/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -4698,7 +4707,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "EFConnect.Data": "1.0.0"
+          "EFConnect.Data": "1.0.0",
+          "Microsoft.AspNetCore.All": "2.0.6"
         },
         "compile": {
           "bin/placeholder/EFConnect.Models.dll": {}
@@ -4710,6 +4720,21 @@
     }
   },
   "libraries": {
+    "CloudinaryDotNet/1.2.0": {
+      "sha512": "vDVJphErvptCVvDTaLnIs5yxWRmCA7nB2EOMiFK2+Yjc9aBL/InKvKgEQJtYJ08XfiwaPUkYcS1qVqCbMYTOcg==",
+      "type": "package",
+      "path": "cloudinarydotnet/1.2.0",
+      "files": [
+        "cloudinarydotnet.1.2.0.nupkg.sha512",
+        "cloudinarydotnet.nuspec",
+        "lib/net40/CloudinaryDotNet.dll",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/netcore/CloudinaryDotNet.deps.json",
+        "lib/netcore/CloudinaryDotNet.dll",
+        "lib/netstandard1.3/CloudinaryDotNet.deps.json",
+        "lib/netstandard1.3/CloudinaryDotNet.dll"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -12343,6 +12368,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "CloudinaryDotNet >= 1.2.0",
       "EFConnect.Contracts >= 1.0.0",
       "EFConnect.Data >= 1.0.0",
       "EFConnect.Helpers >= 1.0.0",
@@ -12404,6 +12430,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "CloudinaryDotNet": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

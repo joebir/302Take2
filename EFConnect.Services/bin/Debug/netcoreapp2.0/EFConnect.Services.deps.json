@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "15ecfb8f5d8d1a9197c2ec73dc356cef4d01908e"
+    "signature": "24ee1719abbe976538155b06270c71d6985ee78a"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "EFConnect.Services/1.0.0": {
         "dependencies": {
+          "CloudinaryDotNet": "1.2.0",
           "EFConnect.Contracts": "1.0.0",
           "EFConnect.Data": "1.0.0",
           "EFConnect.Helpers": "1.0.0",
@@ -15,6 +16,11 @@
         },
         "runtime": {
           "EFConnect.Services.dll": {}
+        }
+      },
+      "CloudinaryDotNet/1.2.0": {
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -3161,7 +3167,8 @@
       },
       "EFConnect.Models/1.0.0": {
         "dependencies": {
-          "EFConnect.Data": "1.0.0"
+          "EFConnect.Data": "1.0.0",
+          "Microsoft.AspNetCore.All": "2.0.6"
         },
         "runtime": {
           "EFConnect.Models.dll": {}
@@ -3174,6 +3181,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CloudinaryDotNet/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vDVJphErvptCVvDTaLnIs5yxWRmCA7nB2EOMiFK2+Yjc9aBL/InKvKgEQJtYJ08XfiwaPUkYcS1qVqCbMYTOcg==",
+      "path": "cloudinarydotnet/1.2.0",
+      "hashPath": "cloudinarydotnet.1.2.0.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
