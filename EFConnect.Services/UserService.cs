@@ -102,5 +102,19 @@ namespace EFConnect.Services
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<bool> UpdateUser(int id, UserForUpdate model)
+        {
+            var user = await _context.Users
+                                .FirstOrDefaultAsync(u => u.Id == id);
+
+            user.Introduction = model.Introduction;
+            user.LookingFor = model.LookingFor;
+            user.Interests = model.Interests;
+            user.City = model.City;
+            user.State = model.State;
+
+            return await _context.SaveChangesAsync() == 1;
+        }
     }
 }

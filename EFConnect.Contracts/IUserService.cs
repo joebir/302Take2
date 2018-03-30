@@ -11,5 +11,6 @@ namespace EFConnect.Contracts
         Task<bool> SaveAll();
         Task<IEnumerable<UserForList>> GetUsers();
         Task<UserForDetail> GetUser(int id);
+        Task<bool> UpdateUser(int id, UserForUpdate userForUpdate);
     }
 }
