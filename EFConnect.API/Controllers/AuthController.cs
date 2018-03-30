@@ -1,10 +1,12 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using EFConnect.Contracts;
 using EFConnect.Data.Entities;
+using EFConnect.Helpers;
 using EFConnect.Models.User;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -32,9 +34,9 @@ namespace EFConnect.API.Controllers
             if (await _authService.UserExists(userForRegister.Username))
                 ModelState.AddModelError("Username", "Username already exists");
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
+
             var userToCreate = new User
             {
                 Username = userForRegister.Username
@@ -52,7 +54,7 @@ namespace EFConnect.API.Controllers
 
             if (userFromDb == null)
                 return Unauthorized();
-            
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config.GetSection("AppSettings:Token").Value);
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -69,7 +71,21 @@ namespace EFConnect.API.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            return Ok( new { tokenString });
+            var user = new UserForList
+            {
+                Id = userFromDb.Id,
+                Username = userFromDb.Username,
+                Specialty = userFromDb.Specialty,
+                Age = userFromDb.DateOfBirth.CalculateAge(),
+                KnownAs = userFromDb.KnownAs,
+                Created = userFromDb.Created,
+                LastActive = userFromDb.LastActive,
+                City = userFromDb.City,
+                State = userFromDb.State,
+                PhotoUrl = userFromDb.Photos.FirstOrDefault(p => p.IsMain).Url,
+            };
+
+            return Ok(new { tokenString, user });
         }
     }
 }
