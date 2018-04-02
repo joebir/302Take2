@@ -70,5 +70,38 @@ namespace EFConnect.API.Controllers
 
             return BadRequest("Could not set photo to main");
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePhoto(int userId, int id)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var photoFromRepo = await _photoService.GetPhotoEntity(id);
+
+            if (photoFromRepo == null)
+                return NotFound();
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("You cannot delete your main photo");
+
+            if (photoFromRepo.PublicId != null)
+            {
+                var result = _photoService.DeletePhotoFromCloudinary(photoFromRepo.PublicId).ToString();
+
+                if (result == "ok")
+                    _userService.Delete(photoFromRepo);
+            }
+
+            if (photoFromRepo.PublicId == null)
+            {
+                _userService.Delete(photoFromRepo);
+            }
+
+            if (await _photoService.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete the photo");
+        }
     }
 }

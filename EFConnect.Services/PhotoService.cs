@@ -131,5 +131,16 @@ namespace EFConnect.Services
 
             return await SaveAll();
         }
+
+        public async Task<Photo> GetPhotoEntity(int id)
+        {
+            return await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public object DeletePhotoFromCloudinary(string publicId)
+        {
+            var deleteParams = new DeletionParams(publicId);
+            return _cloudinary.Destroy(deleteParams).Result;
+        }
     }
 }
