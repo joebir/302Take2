@@ -94,7 +94,22 @@ namespace EFConnect.Services
                                     State = e.State,
                                     PhotoUrl = e.Photos.FirstOrDefault(p => p.IsMain).Url
                                 }
-                            ).AsQueryable();
+                            )
+                            .OrderByDescending(u => u.LastActive)
+                            .AsQueryable();
+
+            if (!string.IsNullOrEmpty(userParams.OrderBy))
+            {
+                switch (userParams.OrderBy)
+                {
+                    case "created":
+                        users = users.OrderByDescending(u => u.Created);
+                        break;
+                    default:
+                        users = users.OrderByDescending(u => u.LastActive);
+                        break;
+                }
+            }
 
             users = users.Where(u => u.Id != userParams.UserId);                        //  <--- Added (1)
 

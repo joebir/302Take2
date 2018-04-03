@@ -7,6 +7,7 @@ namespace EFConnect.Models
         private int pageSize = 12;
         public int UserId { get; set; }
         public string Specialty { get; set; } = "All";
+        public string OrderBy { get; set; }
 
         public int PageSize
         {
