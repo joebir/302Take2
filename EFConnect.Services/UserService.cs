@@ -3,7 +3,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using EFConnect.Contracts;
 using EFConnect.Data;
+using EFConnect.Data.Entities;
 using EFConnect.Helpers;
+using EFConnect.Models;
 using EFConnect.Models.Photo;
 using EFConnect.Models.User;
 using Microsoft.EntityFrameworkCore;
@@ -74,9 +76,9 @@ namespace EFConnect.Services
             return userToReturn;                                                // 5
         }
 
-        public async Task<IEnumerable<UserForList>> GetUsers()
+        public async Task<PagedList<UserForList>> GetUsers(UserParams userParams)
         {
-            var users = await _context.Users
+            var users = _context.Users
                             .Include(p => p.Photos)
                             .Select(
                                 e => new UserForList
@@ -92,10 +94,9 @@ namespace EFConnect.Services
                                     State = e.State,
                                     PhotoUrl = e.Photos.FirstOrDefault(p => p.IsMain).Url
                                 }
-                            )
-                            .ToListAsync();
+                            ).AsQueryable();
 
-            return users;
+            return await PagedList<UserForList>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
         public async Task<bool> SaveAll()
@@ -115,6 +116,11 @@ namespace EFConnect.Services
             user.State = model.State;
 
             return await _context.SaveChangesAsync() == 1;
+        }
+
+        public async Task<User> GetUserEntity(int id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
         }
     }
 }

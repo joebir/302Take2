@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EFConnect.Contracts\EFConnect.Contracts.csproj" />
+    <ProjectReference Include="..\EFConnect.Data\EFConnect.Data.csproj" />
+  </ItemGroup>
+
 </Project>

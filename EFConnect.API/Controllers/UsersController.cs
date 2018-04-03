@@ -2,12 +2,15 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using EFConnect.Contracts;
+using EFConnect.Helpers;
+using EFConnect.Models;
 using EFConnect.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFConnect.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     public class UsersController : Controller
@@ -20,9 +23,11 @@ namespace EFConnect.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<IActionResult> GetUsers(UserParams userParams)
         {
-            var users = await _userService.GetUsers();
+            var users = await _userService.GetUsers(userParams);
+
+            Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
 
             return Ok(users);
         }

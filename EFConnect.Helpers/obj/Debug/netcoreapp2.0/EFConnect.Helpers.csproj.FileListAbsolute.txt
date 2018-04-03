@@ -7,3 +7,10 @@ C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\E
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.dll
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.pdb
 C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.csprojResolveAssemblyReference.cache
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Contracts.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Data.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Models.dll
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Contracts.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Data.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\bin\Debug\netcoreapp2.0\EFConnect.Models.pdb
+C:\ElevenFiftyContractWork\EFConnect\EFConnect.Helpers\obj\Debug\netcoreapp2.0\EFConnect.Helpers.csproj.CopyComplete

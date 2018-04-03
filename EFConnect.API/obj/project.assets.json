@@ -4694,6 +4694,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "EFConnect.Contracts": "1.0.0",
+          "EFConnect.Data": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.6"
         },
         "compile": {
