@@ -42,7 +42,8 @@ namespace EFConnect.API
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IPhotoService, PhotoService>();
-            services.AddScoped<LogUserActivity>(); 
+            services.AddScoped<LogUserActivity>();
+            services.AddScoped<IMessageService, MessageService>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
