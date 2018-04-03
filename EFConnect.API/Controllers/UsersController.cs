@@ -25,6 +25,10 @@ namespace EFConnect.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsers(UserParams userParams)
         {
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            userParams.UserId = currentUserId;
+
             var users = await _userService.GetUsers(userParams);
 
             Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);

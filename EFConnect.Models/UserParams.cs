@@ -5,6 +5,8 @@ namespace EFConnect.Models
         public int PageNumber { get; set; } = 1;
         private const int MaxPageSize = 50;
         private int pageSize = 12;
+        public int UserId { get; set; }
+        public string Specialty { get; set; } = "All";
 
         public int PageSize
         {

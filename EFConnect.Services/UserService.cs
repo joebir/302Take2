@@ -96,6 +96,13 @@ namespace EFConnect.Services
                                 }
                             ).AsQueryable();
 
+            users = users.Where(u => u.Id != userParams.UserId);                        //  <--- Added (1)
+
+            if (userParams.Specialty.ToLower() != "all")                                //  <--- Added (2)
+            {
+                users = users.Where(u => u.Specialty == userParams.Specialty);
+            }
+
             return await PagedList<UserForList>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
