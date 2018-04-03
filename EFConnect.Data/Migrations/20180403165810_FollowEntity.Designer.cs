@@ -11,9 +11,10 @@ using System;
 namespace EFConnect.Data.Migrations
 {
     [DbContext(typeof(EFConnectContext))]
-    partial class EFConnectContextModelSnapshot : ModelSnapshot
+    [Migration("20180403165810_FollowEntity")]
+    partial class FollowEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

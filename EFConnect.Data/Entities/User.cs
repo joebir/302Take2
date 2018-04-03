@@ -35,6 +35,9 @@ namespace EFConnect.Data.Entities
         public string State { get; set; }
 
         public ICollection<Photo> Photos { get; set; }
+        public ICollection<Follow> Follower { get; set; }
+
+        public ICollection<Follow> Followee { get; set; }
 
         public User()
         {

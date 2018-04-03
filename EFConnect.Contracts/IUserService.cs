@@ -15,5 +15,6 @@ namespace EFConnect.Contracts
         Task<UserForDetail> GetUser(int id);
         Task<bool> UpdateUser(int id, UserForUpdate userForUpdate);
         Task<User> GetUserEntity(int id);
+        Task<Follow> GetFollow(int userId, int recipientId);
     }
 }

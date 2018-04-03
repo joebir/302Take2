@@ -113,6 +113,18 @@ namespace EFConnect.Services
 
             users = users.Where(u => u.Id != userParams.UserId);                        //  <--- Added (1)
 
+            if (userParams.Followers)
+            {
+                var userFollowers = await GetUserFollows(userParams.UserId, userParams.Followers);
+                users = users.Where(u => userFollowers.Any(follower => follower.FollowerId == u.Id));
+            }
+
+            if (userParams.Followees)
+            {
+                var userFollowees = await GetUserFollows(userParams.UserId, userParams.Followers);
+                users = users.Where(u => userFollowees.Any(followee => followee.FolloweeId == u.Id));
+            }
+
             if (userParams.Specialty.ToLower() != "all")                                //  <--- Added (2)
             {
                 users = users.Where(u => u.Specialty == userParams.Specialty);
@@ -143,6 +155,31 @@ namespace EFConnect.Services
         public async Task<User> GetUserEntity(int id)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+        }
+
+        public async Task<Follow> GetFollow(int userId, int recipientId)
+        {
+            return await _context
+                            .Follows
+                            .FirstOrDefaultAsync(u => u.FollowerId == userId &&
+                                                      u.FolloweeId == recipientId);
+        }
+
+        private async Task<IEnumerable<Follow>> GetUserFollows(int id, bool followers)
+        {
+            var user = await _context.Users
+                        .Include(x => x.Followee)
+                        .Include(x => x.Follower)
+                        .FirstOrDefaultAsync(u => u.Id == id);
+
+            if (followers)
+            {
+                return user.Followee.Where(u => u.FolloweeId == id);
+            }
+            else
+            {
+                return user.Follower.Where(u => u.FollowerId == id);
+            }
         }
     }
 }

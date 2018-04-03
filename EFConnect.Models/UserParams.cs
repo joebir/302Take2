@@ -8,6 +8,8 @@ namespace EFConnect.Models
         public int UserId { get; set; }
         public string Specialty { get; set; } = "All";
         public string OrderBy { get; set; }
+        public bool Followees { get; set; } = false;
+        public bool Followers { get; set; } = false;
 
         public int PageSize
         {
