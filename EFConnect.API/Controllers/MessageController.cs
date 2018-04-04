@@ -81,5 +81,45 @@ namespace EFConnect.API.Controllers
 
             return Ok(messages);
         }
+
+        [HttpPost("{id}")]
+        public async Task<IActionResult> DeleteMessage(int id, int userId)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var message = await _messageService.GetMessage(id);
+
+            if (message.SenderId == userId)
+                message.SenderDeleted = true;
+
+            if (message.RecipientId == userId)
+                message.RecipientDeleted = true;
+
+            if (message.SenderDeleted && message.RecipientDeleted)
+                _userService.Delete(message);
+
+            if (await _messageService.SaveAll())
+                return NoContent();
+
+            throw new Exception("Error deleting the message");
+        }
+
+        [HttpPost("{id}/read")]
+        public async Task<IActionResult> MarkMessageAsRead(int userId, int id)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var message = await _messageService.GetMessage(id);
+
+            if (message.RecipientId != userId)
+                return BadRequest("Failed to mark message as read.");
+
+            if (await _messageService.MarkMessageAsRead(message))
+                return NoContent();
+
+            throw new Exception("Error deleting the message");
+        }
     }
 }

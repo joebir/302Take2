@@ -107,7 +107,7 @@ namespace EFConnect.Services
         {
             var sender = await _userService.GetUser(messageForCreation.SenderId);
             var recipient = await _userService.GetUser(messageForCreation.RecipientId);
-            
+
             var message = new Message
             {
                 SenderId = messageForCreation.SenderId,
